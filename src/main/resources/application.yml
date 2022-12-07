@@ -1,0 +1,15 @@
+spring:
+  main:
+    lazy-initialization: true
+  data:
+    mongodb:
+      host: ${MONGO_HOST_DB:localhost}
+      port: ${MONGO_PORT_DB:27017}
+      database: ${MONGO_DB_NAME:attendance-db}
+  lifecycle:
+    timeout-per-shutdown-phase: 60s
+
+server:
+  port: ${SERVER_PORT:9000}
+  shutdown: graceful
+
